@@ -18,7 +18,7 @@ function App() {
     "나이키 신발 추천",
   ]);
   //Array로 state 값을 뽑기
-  const [좋아요, e] = useState(0);
+  // const [좋아요, e] = useState(0);
   const [like, setLike] = useState([0, 0, 0]);
   const [detail, setDetail] = useState(false);
 
