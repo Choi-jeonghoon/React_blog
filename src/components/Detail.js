@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const Detail = () => {
+  
+
   return (
     <div className="modal">
       <h4>제목</h4>
