@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./App.css";
+import Detail from "../src/components/Detail.js";
 
 function App() {
   // let [Title1, a] = useState("골든 구스 추천");
@@ -69,13 +70,24 @@ function App() {
         <p>11월 30일</p>
       </div>
       <div className="list">
-        <h4>{Title[1]}</h4>
+        <h4>
+          {Title[1]}
+          {/* <span
+            onClick={() => {
+              e(좋아요 + 1);
+            }}
+          >
+            👍
+          </span>
+          {좋아요} */}
+        </h4>
         <p>11월 30일</p>
       </div>
       <div className="list">
         <h4>{Title[2]}</h4>
         <p>11월 30일</p>
       </div>
+      <Detail></Detail>
     </div>
   );
 }
