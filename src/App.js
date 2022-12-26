@@ -22,6 +22,7 @@ function App() {
   const [like, setLike] = useState([0, 0, 0]);
   const [detail, setDetail] = useState(false);
   const [titles, setTitles] = useState(0);
+  const [입력값, set입력값] = useState("");
 
   return (
     <div className="App">
@@ -107,6 +108,15 @@ function App() {
                 👍
                 {like[i]}
               </span>
+              <button
+                onClick={() => {
+                  const copy = [...title];
+                  copy.splice(i, 1);
+                  setTitle(copy);
+                }}
+              >
+                삭제
+              </button>
             </div>
             {/* <h4>{title[i]} </h4> */}
             {/* 
@@ -116,6 +126,21 @@ function App() {
           </div>
         );
       })}
+      <input
+        onChange={(e) => {
+          set입력값(e.target.value);
+          console.log(입력값);
+        }}
+      />
+      <button
+        onClick={() => {
+          const copy = [...title];
+          copy.unshift(입력값);
+          setTitle(copy);
+        }}
+      >
+        Sand
+      </button>
 
       {detail == true ? (
         <Detail color={"skyblue"} titles={titles} title={title} />
