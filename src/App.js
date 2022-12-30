@@ -92,7 +92,7 @@ function App() {
               <h4
                 style={{ cursor: "pointer" }}
                 onClick={() => {
-                  setDetail(!detail);
+                  setDetail(true);
                   setTitles(i);
                 }}
               >
@@ -143,7 +143,12 @@ function App() {
       </button>
 
       {detail == true ? (
-        <Detail color={"skyblue"} titles={titles} title={title} />
+        <Detail
+          color={"skyblue"}
+          title={title}
+          titles={titles}
+          setTitle={setTitle}
+        />
       ) : null}
       {/* if문은 리엑트상에서 작동하지않기때문에 삼향연산자로 작성해서 쓴다 위와 같은모습으로
       위의 있는 코드는 detail state의 값이 참이면 Detail컴포넌트를 보여주고 그게아니면 보여주지 않는다는 의미의 code */}
